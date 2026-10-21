@@ -1,0 +1,394 @@
+:root {
+    --azul: #17384a;
+    --coral: #e96b4b;
+    --fondo: #fffdf8;
+    --fondo-seccion: #f4f0e6;
+    --texto: #333333;
+    --borde: #d8d2c7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--azul);
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--azul);
+}
+
+.contenedor {
+    width: min(1000px, 92%);
+    margin: 0 auto;
+}
+
+.seccion {
+    padding: 55px 0;
+    scroll-margin-top: 75px;
+}
+
+.fondo-claro {
+    background: var(--fondo-seccion);
+}
+
+/* Encabezado */
+.encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: var(--azul);
+    color: white;
+}
+
+.encabezado-contenido {
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Portada */
+.inicio {
+    padding: 65px 0;
+    background: #f8e8dc;
+}
+
+.inicio-contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 28px;
+}
+
+.inicio-texto p {
+    max-width: 600px;
+}
+
+.inicio-imagen img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Texto de secciones */
+.texto-intro {
+    margin-bottom: 25px;
+}
+
+.nota {
+    margin-top: 20px;
+    font-size: 0.92rem;
+}
+
+/* Tarjetas de servicios, planes y cuenta */
+.lista-servicios,
+.lista-planes,
+.lista-cuentas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.lista-cuentas {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.caja {
+    padding: 20px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    background: white;
+}
+
+.caja h3 {
+    margin-top: 0;
+}
+
+.caja ul {
+    padding-left: 20px;
+}
+
+/* Fotos de servicios */
+.imagen-servicio {
+    display: block;
+    width: 100%;
+    height: 170px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.icono-servicio {
+    margin: 5px 0;
+    font-size: 1.5rem;
+}
+
+/* Precios */
+.precio {
+    color: var(--coral);
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.precio span {
+    color: var(--texto);
+    font-size: 0.95rem;
+    font-weight: normal;
+}
+
+/* Formularios */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulario label {
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: white;
+    font: inherit;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    outline: 2px solid var(--coral);
+}
+
+.boton {
+    display: inline-block;
+    width: fit-content;
+    margin-top: 12px;
+    padding: 10px 16px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--coral);
+    color: white;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.boton:hover {
+    background: #cf5538;
+}
+
+.boton-secundario {
+    background: var(--azul);
+}
+
+.boton-secundario:hover {
+    background: #0e2634;
+}
+
+.mensaje {
+    min-height: 24px;
+    color: #17633e;
+    font-weight: bold;
+}
+
+.aviso {
+    margin-top: 20px;
+    padding: 12px;
+    border-left: 4px solid var(--coral);
+    background: #fff4e8;
+}
+
+/* CRUD de mascotas */
+.crud {
+    display: grid;
+    grid-template-columns: 330px 1fr;
+    gap: 18px;
+    align-items: start;
+}
+
+.tabla-caja {
+    min-width: 0;
+}
+
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-top: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.9rem;
+}
+
+th,
+td {
+    padding: 9px;
+    border: 1px solid var(--borde);
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: var(--fondo-seccion);
+}
+
+.boton-tabla {
+    margin: 2px;
+    padding: 6px 8px;
+    border: 1px solid var(--azul);
+    border-radius: 4px;
+    background: white;
+    color: var(--azul);
+    cursor: pointer;
+}
+
+.boton-tabla:hover {
+    background: var(--azul);
+    color: white;
+}
+
+.oculta {
+    display: none !important;
+}
+
+/* Pie de página */
+.pie {
+    padding: 20px 0;
+    background: var(--azul);
+    color: white;
+    text-align: center;
+}
+
+/* Botones fijos de navegación */
+.controles-pagina {
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 20;
+    display: flex;
+    gap: 8px;
+}
+
+.controles-pagina button {
+    padding: 10px 13px;
+    border: 1px solid var(--azul);
+    border-radius: 5px;
+    background: white;
+    color: var(--azul);
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+.controles-pagina button:hover {
+    background: var(--azul);
+    color: white;
+}
+
+/* Ajustes para celulares y tabletas */
+@media (max-width: 750px) {
+    .encabezado-contenido {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 0;
+    }
+
+    .menu {
+        gap: 10px 14px;
+    }
+
+    .inicio-contenido,
+    .lista-servicios,
+    .lista-planes,
+    .lista-cuentas,
+    .crud {
+        grid-template-columns: 1fr;
+    }
+
+    .inicio-imagen img {
+        height: 230px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .controles-pagina {
+        right: 8px;
+        bottom: 8px;
+    }
+
+    .controles-pagina button {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+}

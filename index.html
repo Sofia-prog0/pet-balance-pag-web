@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="PetBalance es una propuesta web para consultar servicios de cuidado de mascotas y administrar sus datos."
+    >
+
+    <title>PetBalance | Cuidado de mascotas</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="contenedor encabezado-contenido">
+            <a class="logo" href="#inicio" aria-label="PetBalance, ir al inicio">
+                <img src="imagenes/logo-petbalance.jpg" alt="Logo de PetBalance">
+                <span>PetBalance</span>
+            </a>
+
+            <nav class="menu" aria-label="Navegación principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#planes">Planes</a>
+                <a href="#cuenta">Cuenta</a>
+                <a href="#mascotas">Mascotas</a>
+                <a href="#proyecto">Proyecto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Inicio -->
+        <section class="seccion inicio" id="inicio">
+            <div class="contenedor inicio-contenido">
+                <div class="inicio-texto">
+                    <h1>Cuidado para tu mascota</h1>
+
+                    <p>
+                        PetBalance es una propuesta para ayudar a los dueños de mascotas
+                        a encontrar servicios de cuidado, paseos y hospedaje.
+                    </p>
+
+                    <p>
+                        El proyecto está pensado inicialmente para usuarios de Bogotá.
+                    </p>
+
+                    <a class="boton" href="#servicios">Ver los servicios</a>
+                    
+            <div class="caja" style="margin-top: 30px;">
+                    <h3>Encuentra cuidadores cerca de ti</h3>
+                    <p>Carga un cuidador recomendado y comparte tu ubicación para ver el mapa.</p>
+    
+         <button class="boton" id="btnCargar" type="button">Cargar Cuidador</button>
+           <button class="boton boton-secundario" id="btnUbicacion" type="button">Obtener Mi Ubicación</button>
+    
+    <!-- Contenedores exigidos por la guía -->
+           <div id="perfilUsuario" style="margin-top: 15px;"></div>
+           <div id="infoUbicacion" style="margin-top: 15px;"></div>
+             </div> 
+                </div>
+
+                <div class="inicio-imagen">
+                    <img
+                        src="imagenes/mascota-con-dueno.jpg"
+                        alt="Perro acompañado por su dueño"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section class="seccion" id="servicios">
+            <div class="contenedor">
+                <h2>Servicios</h2>
+
+                <p class="texto-intro">
+                    Estas son algunas de las opciones que se podrían consultar
+                    desde la plataforma.
+                </p>
+
+                <div class="lista-servicios">
+                    <article class="caja">
+                        <img
+                            class="imagen-servicio"
+                            src="imagenes/paseo-mascotas.jpg"
+                            alt="Gato y perro al aire libre"
+                            loading="lazy"
+                        >
+
+                        <p class="icono-servicio" aria-hidden="true">🦮</p>
+                        <h3>Paseos</h3>
+                        <p>
+                            Una opción para que la mascota salga a caminar
+                            acompañada por un cuidador.
+                        </p>
+                    </article>
+
+                    <article class="caja">
+                        <img
+                            class="imagen-servicio"
+                            src="imagenes/cuidado-mascotas.jpg"
+                            alt="Perro y gato juntos"
+                            loading="lazy"
+                        >
+
+                        <p class="icono-servicio" aria-hidden="true">🐾</p>
+                        <h3>Visitas y cuidado</h3>
+                        <p>
+                            Acompañamiento para mascotas que necesitan atención
+                            en su hogar.
+                        </p>
+                    </article>
+
+                    <article class="caja">
+                        <img
+                            class="imagen-servicio"
+                            src="imagenes/mascota-con-dueno.jpg"
+                            alt="Perro acompañado por su dueño"
+                            loading="lazy"
+                        >
+
+                        <p class="icono-servicio" aria-hidden="true">🏠</p>
+                        <h3>Hospedaje</h3>
+                        <p>
+                            Una alternativa de cuidado para los días en que
+                            el dueño no puede estar en casa.
+                        </p>
+                    </article>
+                </div>
+
+                <p class="nota">
+                    El precio de cada servicio depende del proveedor y se cobra aparte
+                    del plan de la plataforma.
+                </p>
+            </div>
+        </section>
+
+        <!-- Planes -->
+        <section class="seccion fondo-claro" id="planes">
+            <div class="contenedor">
+                <h2>Planes</h2>
+
+                <p class="texto-intro">
+                    Estos son los valores propuestos para las suscripciones de PetBalance.
+                </p>
+
+                <div class="lista-planes">
+                    <article class="caja">
+                        <h3>Básico</h3>
+                        <p class="precio">
+                            $19.900 COP <span>al mes</span>
+                        </p>
+
+                        <ul>
+                            <li>Perfil de la mascota</li>
+                            <li>Registro de información básica</li>
+                            <li>Búsqueda de servicios y cuidadores</li>
+                        </ul>
+                    </article>
+
+                    <article class="caja">
+                        <h3>Premium</h3>
+                        <p class="precio">
+                            $39.900 COP <span>al trimestre</span>
+                        </p>
+
+                        <ul>
+                            <li>Incluye los beneficios del plan Básico</li>
+                            <li>Prioridad para solicitar servicios</li>
+                            <li>Seguimiento de la mascota</li>
+                            <li>Descuentos en establecimientos aliados</li>
+                        </ul>
+                    </article>
+
+                    <article class="caja">
+                        <h3>Business / VIP</h3>
+                        <p class="precio">
+                            $69.900 COP <span>al trimestre</span>
+                        </p>
+
+                        <ul>
+                            <li>Incluye los beneficios del plan Premium</li>
+                            <li>Promociones y descuentos especiales</li>
+                            <li>Beneficios en tiendas y spas aliados</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <p class="nota">
+                    El plan Básico se cobra mensualmente. Premium y Business / VIP
+                    se cobran trimestralmente. Los servicios de proveedores aliados
+                    tienen un costo adicional.
+                </p>
+            </div>
+        </section>
+
+        <!-- Registro e inicio de sesión -->
+        <section class="seccion" id="cuenta">
+            <div class="contenedor">
+                <h2>Cuenta de usuario</h2>
+
+                <p class="texto-intro">
+                    Crea una cuenta de prueba o inicia sesión para usar el registro
+                    de mascotas.
+                </p>
+
+                <div id="formularios-cuenta" class="lista-cuentas">
+
+                    <form class="caja formulario" id="formulario-registro">
+                        <h3>Crear cuenta</h3>
+
+                        <label for="registro-nombre">Nombre</label>
+                        <input
+                            id="registro-nombre"
+                            type="text"
+                            required
+                            minlength="2"
+                            autocomplete="name"
+                        >
+
+                        <label for="registro-correo">Correo</label>
+                        <input
+                            id="registro-correo"
+                            type="email"
+                            required
+                            autocomplete="email"
+                        >
+
+                        <label for="registro-clave">Contraseña de prueba</label>
+                        <input
+                            id="registro-clave"
+                            type="password"
+                            required
+                            minlength="6"
+                            autocomplete="new-password"
+                        >
+
+                        <button class="boton" type="submit">Registrarme</button>
+
+                        <p class="mensaje" id="mensaje-registro" aria-live="polite"></p>
+                    </form>
+
+                    <form class="caja formulario" id="formulario-inicio-sesion">
+                        <h3>Iniciar sesión</h3>
+
+                        <label for="inicio-correo">Correo</label>
+                        <input
+                            id="inicio-correo"
+                            type="email"
+                            required
+                            autocomplete="email"
+                        >
+
+                        <label for="inicio-clave">Contraseña</label>
+                        <input
+                            id="inicio-clave"
+                            type="password"
+                            required
+                            autocomplete="current-password"
+                        >
+
+                        <button class="boton" type="submit">Ingresar</button>
+
+                        <p class="mensaje" id="mensaje-inicio" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div class="caja cuenta-activa oculta" id="cuenta-activa">
+                    <h3 id="saludo-usuario">Sesión iniciada</h3>
+
+                    <p>
+                        Ya puedes agregar y administrar los registros de tus mascotas.
+                    </p>
+
+                    <button
+                        class="boton boton-secundario"
+                        id="boton-cerrar-sesion"
+                        type="button"
+                    >
+                        Cerrar sesión
+                    </button>
+                </div>
+
+                <p class="aviso">
+                    Prototipo académico: usa datos inventados. Esta página guarda
+                    información solo en el navegador; no es un sistema seguro para
+                    datos reales.
+                </p>
+            </div>
+        </section>
+
+        <!-- CRUD de mascotas -->
+        <section class="seccion fondo-claro" id="mascotas">
+            <div class="contenedor">
+                <h2>Mis mascotas</h2>
+
+                <p class="texto-intro">
+                    En esta sección puedes crear, consultar, editar y eliminar
+                    registros de mascotas.
+                </p>
+
+                <p id="mensaje-requiere-cuenta" class="aviso">
+                    Para usar el registro, primero crea una cuenta de prueba
+                    o inicia sesión.
+                </p>
+
+                <div class="crud oculta" id="contenido-mascotas">
+                    <form class="caja formulario" id="formulario-mascota">
+                        <h3 id="titulo-formulario-mascota">Agregar mascota</h3>
+
+                        <input type="hidden" id="mascota-id">
+
+                        <label for="nombre-mascota">Nombre</label>
+                        <input
+                            id="nombre-mascota"
+                            type="text"
+                            required
+                            minlength="2"
+                            maxlength="40"
+                        >
+
+                        <label for="especie-mascota">Especie</label>
+                        <select id="especie-mascota" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="Perro">Perro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Otra">Otra</option>
+                        </select>
+
+                        <label for="edad-mascota">Edad en años</label>
+                        <input
+                            id="edad-mascota"
+                            type="number"
+                            min="0"
+                            max="40"
+                            required
+                        >
+
+                        <label for="raza-mascota">Raza</label>
+                        <input
+                            id="raza-mascota"
+                            type="text"
+                            maxlength="50"
+                        >
+
+                        <label for="indicaciones-mascota">Indicaciones generales</label>
+                        <textarea
+                            id="indicaciones-mascota"
+                            rows="3"
+                            maxlength="250"
+                        ></textarea>
+
+                        <button
+                            class="boton"
+                            type="submit"
+                            id="boton-guardar-mascota"
+                        >
+                            Agregar mascota
+                        </button>
+
+                        <button
+                            class="boton boton-secundario oculta"
+                            type="button"
+                            id="boton-cancelar-edicion"
+                        >
+                            Cancelar edición
+                        </button>
+
+                        <p
+                            class="mensaje"
+                            id="mensaje-mascota"
+                            aria-live="polite"
+                        ></p>
+                    </form>
+
+                    <div class="caja tabla-caja">
+                        <h3>Mascotas registradas</h3>
+
+                        <p id="contador-mascotas">0 mascotas</p>
+
+                        <div class="tabla-contenedor">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nombre</th>
+                                        <th>Especie</th>
+                                        <th>Edad</th>
+                                        <th>Raza</th>
+                                        <th>Indicaciones</th>
+                                        <th>Acciones</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="lista-mascotas">
+                                    <!-- JavaScript agrega aquí los registros -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Información del proyecto -->
+        <section class="seccion" id="proyecto">
+            <div class="contenedor">
+                <h2>Sobre el proyecto</h2>
+
+                <p>
+                    PetBalance busca reunir en un mismo sitio información de mascotas,
+                    servicios, reservas y cuidadores. Esta página es una primera versión
+                    académica para mostrar la idea y algunas funciones básicas.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="pie">
+        <div class="contenedor">
+            <p>PetBalance — Proyecto académico</p>
+        </div>
+    </footer>
+
+    <!-- Botones fijos para recorrer las secciones -->
+    <div class="controles-pagina" aria-label="Controles para recorrer la página">
+        <button type="button" id="boton-anterior">← Anterior</button>
+        <button type="button" id="boton-siguiente">Siguiente →</button>
+    </div>
+
+</body>
+</html>
